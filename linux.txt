@@ -1,0 +1,74 @@
+
+
+como trabalhar com o Linux
+para zipar, usar comando zip -r /n teste
+-r serve para realizar uma operação recursiva
+
+
+=> Para compactar uma diretório
+	tar -czf nomeArquivo.tar.gz NomeDiretorio
+	
+=> Para descompactar diretório
+	tar -xzf nomeArquivo.tar.gz
+	
+=> Para somente 'Encostar' e alterar a data de modificação
+	touch nomeArquivo
+	
+=> para ler Arquivo
+	=> cat nomeArquivo para ler tudo
+	=> head nomeArquivo ler 10 primeiras linhas
+	=> tail nomeArquivo ler 10 últimas linhas 
+	=> more nomeArquivo leia em stream (não carrega arquivo inteiro de uma vez)
+	
+	=> less nomeArquivo => permite interagir com arquivo
+
+	=> Para Editar Arquivo a partir do terminal
+		=> vi nomeArquivo
+			=> teclar i para editar arquivo
+			=> teclar esc papra ir para modo de visualização
+			=> x remove caracter (caso tenhamos que excluir vários, digitar número e clicar x)
+			=> ir para última linha => G
+			=> ir para segunda linha => 2G
+			=> procurar, pesquisar => /palavra => n para navegar entre ocorrências
+			=> :w para salvar
+			=> :q para 
+
+
+=> Abrir somente linhas de um arquivo com filtro por palavra
+	=> cat nomeArquivo | grep filtroASerPesquisadoNoArquivo
+	
+	###Este comando serve para que possamos ver somente as linhas com a palavra chave procurada
+
+-----------------------------------------------------------------------------------------------------------
+
+=> Criando um script de execução
+
+=> criar um arquivo .txt
+	=> para dar permissão de execução
+		=> entrar no diretório do arquivo
+		=> sudo chmod +x nomeArquivo
+		
+	=> após isso rodar comando ls -l
+	=> vamos perceber que o usuário tera rwd 
+	=> d significa que temos a permissão de rodar o script
+
+-----------------------------------------------------------------------------------------------------------
+
+Senha root: 123456
+
+-----------------------------------------------------------------------------------------------------------
+
+=> executar arquivo bash que está em uma pasta, mas não quero colocar no /usr/bin
+	=> criar arquivo
+	=> colocar o diretório nos PATH de ambiente
+		=> env | grep PATH
+		=> abrir arquivo dos PATHS
+			=> gedit .bashrc (Abrir arquivo no editor de texto)
+			=> adicionar PATH exemplo: PATH=$PATH:$HOME/Documentos/3-learning-linux
+			=> adicionar permissão de execução ao arquivo
+				=> na pasta do arquivo, rodar => cdmod +x nomeArquivo
+			=> testar
+			
+	
+
+

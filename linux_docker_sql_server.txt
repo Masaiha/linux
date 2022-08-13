@@ -1,0 +1,13 @@
+https://plus.diolinux.com.br/t/dica-instalar-o-sql-server-em-alguma-distro-linux-atraves-do-docker-atualizado-10-2021/28495
+
+
+=> comando úteis
+
+=> start docker: sudo systemctl start docker
+=> start container: sudo docker start nome
+
+
+=> listar instâncias criadas: sudo docker ps -a
+=> listar instâncias rodando: sudo docker ps
+
+
